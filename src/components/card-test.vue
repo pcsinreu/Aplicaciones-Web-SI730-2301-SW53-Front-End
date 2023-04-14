@@ -1,11 +1,13 @@
 <template>
   <div class="my-class">My component {{name}}</div>
-  <button>{{$t('clickme')}}</button>
+
+    <img src="ruta" alt="gato" >
+
+    <label for="username">{{$t('username')}}</label>
+    <pv-input-text id="username" />
+
+    <pv-check-box />
   <pv-button :label="$t('clickme')" rounded class="my-class"/>
-  <input type="text">
-  <label for="username">{{$t('username')}}</label>
-  <pv-input-text />
-  <pv-check-box />
 </template>
 
 <script>
