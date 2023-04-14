@@ -1,9 +1,9 @@
 <template>
   <div class="my-class">My component {{name}}</div>
-  <button>Click me!</button>
-  <pv-button label="click me!" rounded class="my-class"/>
+  <button>{{$t('clickme')}}</button>
+  <pv-button :label="$t('clickme')" rounded class="my-class"/>
   <input type="text">
-  <label for="username">Username</label>
+  <label for="username">{{$t('username')}}</label>
   <pv-input-text />
   <pv-check-box />
 </template>

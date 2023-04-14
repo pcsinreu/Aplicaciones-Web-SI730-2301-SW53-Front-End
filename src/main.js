@@ -14,13 +14,14 @@ import "primeicons/primeicons.css"; //icons
 import Button from 'primevue/button';
 import InputText from 'primevue/inputtext';
 import Checkbox from 'primevue/checkbox';
+import  i18n from '../src/locales/i18n'
 
 const app = createApp(App);
-
 //inyectamos
 app.component('pv-button', Button);
 app.component('pv-input-text', InputText);
 app.component('pv-check-box',Checkbox)
 app.use(PrimeVue);
+app.use(i18n);
 
 app.mount('#app');
