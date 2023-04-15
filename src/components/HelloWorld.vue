@@ -18,7 +18,7 @@ defineProps({
 
       <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
       <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
-        <MyOwnCoponent name="8" description="Desc 8" />
+
     </h3>
   </div>
 </template>

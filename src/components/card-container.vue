@@ -8,10 +8,13 @@ export default {
     components: {CardTest},
     data(){
         return{
-            listCards:[{ name: 'Foo' }, { name: 'Bar' }, { name: 'Test' }]
+            listCards:[]
         }
-    }
-
+    },
+    beforeMount() {
+      //Invocar API
+      this.listCards = [{ name: 'Foo' }, { name: 'Bar' }, { name: 'Test' }, { name: 'Test 2' }]
+  }
 }
 </script>
 
