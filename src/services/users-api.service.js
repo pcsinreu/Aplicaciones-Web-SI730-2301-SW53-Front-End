@@ -11,8 +11,7 @@ export class UsersApiService {
         ///
     };
     createUser(body){
-
+        return axios.post('https://jsonplaceholder.typicode.com/users',body)
     }
-
 
 }
