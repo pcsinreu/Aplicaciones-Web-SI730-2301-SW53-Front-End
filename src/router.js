@@ -4,6 +4,7 @@ import {createRouter ,createWebHashHistory} from 'vue-router';
 import about from "@/components/about.vue";
 import user from "@/components/user.vue";
 import notFound from "@/components/not-found.vue";
+import users from "@/components/users.vue";
 
 
 const routes = [
@@ -11,6 +12,7 @@ const routes = [
     {path:'/cards',component: cardContainer},
     {path:'/user/:id',component: user},
     {path:'/about',component: about},
+    {path:'/users',component: users},
     {path:'/:pathMatch(.*)*' , component: notFound}
 ]
 
