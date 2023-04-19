@@ -3,7 +3,7 @@
     <p/>
     <router-link to="/createuser"> New user</router-link>
     <div v-for="user in users">
-        <router-link  :to="1">user {{user.id}} {{user.username}}</router-link>
+        <router-link  :to="user/1">user {{user.id}} {{user.username}}</router-link>
     </div>
 
 
