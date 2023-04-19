@@ -11,7 +11,7 @@ import createUser from "@/components/create-user.vue";
 const routes = [
     { path:'/', component:Home},
     {path:'/cards',component: cardContainer},
-    {path:'/user/:id',component: user},
+    {path:'/user/:id',component: user , name:'user'},
     {path:'/about',component: about},
     {path:'/users',component: users},
     {path: '/createuser',component:createUser},
