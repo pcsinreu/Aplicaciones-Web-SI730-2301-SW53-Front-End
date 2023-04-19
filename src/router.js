@@ -3,13 +3,15 @@ import cardContainer from "@/components/card-container.vue";
 import {createRouter ,createWebHashHistory} from 'vue-router';
 import about from "@/components/about.vue";
 import user from "@/components/user.vue";
+import notFound from "@/components/not-found.vue";
 
 
 const routes = [
     { path:'/', component:Home},
     {path:'/cards',component: cardContainer},
     {path:'/user/:id',component: user},
-    {path:'/about',component: about}
+    {path:'/about',component: about},
+    {path:'/:pathMatch(.*)*' , component: notFound}
 ]
 
 const router = createRouter({

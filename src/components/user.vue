@@ -1,6 +1,7 @@
 <template>
     <div>User {{id}}</div>
     <div> {{nameUser}}</div>
+    <pv-button label="Back to Home" @click="backToHome()" />
 </template>
 
 <script>
@@ -10,6 +11,11 @@ export default {
         return{
             id:0,
             nameUser:''
+        }
+    },
+    methods:{
+        backToHome:function (){
+            this.$router.push('/');
         }
     },
     beforeMount() {
