@@ -3,7 +3,7 @@
     <p/>
     <router-link to="/createuser"> New user</router-link>
     <div v-for="user in users">
-        <router-link  :to="{ name: 'user', params: { id: user.id }}">user {{user.id}} {{user.username}}</router-link>
+        user {{user.id}} {{user.username}}  <router-link  :to="{ name: 'user', params: { id: user.id }}"> edit</router-link>
     </div>
 
 
@@ -25,7 +25,7 @@ export default {
     beforeMount() {
         // invocar API
         this.userService.getAll().then((response)=>{
-            alert(response.status)
+
            this.users = response.data;
         })
 
