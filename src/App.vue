@@ -7,13 +7,16 @@ import TheWelcome from './components/TheWelcome.vue'
 <template>
   <header>
   </header>
+    <nav>
+        <router-link to="/">Home</router-link>
+        <router-link to="/cards">Cards</router-link>
+        <router-link to="/About">About</router-link>
+        <router-link to="/users">Users</router-link>
+        <router-link to="/posts">Posts</router-link>
+    </nav>
 
   <main>
-      <router-link to="/">Home</router-link>
-      <router-link to="/cards">Cards</router-link>
-      <router-link to="/About">About</router-link>
-      <router-link to="/users">Users</router-link>
-    <router-view></router-view>
+      <router-view></router-view>
   </main>
 </template>
 
@@ -28,6 +31,12 @@ header {
 }
 
 @media (min-width: 1024px) {
+
+    nav{
+        display:flex;
+        gap :12px;
+    }
+
   header {
     display: flex;
     place-items: center;

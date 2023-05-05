@@ -7,6 +7,7 @@ import notFound from "@/components/not-found.vue";
 import users from "@/components/users.vue";
 import createUser from "@/components/create-user.vue";
 import UpdateUser from "@/components/update-user.vue";
+import posts from "@/components/posts.vue";
 
 
 const routes = [
@@ -16,7 +17,8 @@ const routes = [
     {path:'/about',component: about},
     {path:'/users',component: users},
     {path: '/createuser',component:createUser},
-    {path:'/:pathMatch(.*)*' , component: notFound}
+    {path:'/:pathMatch(.*)*' , component: notFound},
+    {path:'/posts',component: posts},
 ]
 
 const router = createRouter({

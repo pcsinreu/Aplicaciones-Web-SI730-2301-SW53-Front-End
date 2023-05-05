@@ -37,8 +37,7 @@ export default {
           })
       },
         getAll(){
-            this.userService.getAll().then((response)=>{
-
+            this.userService.getAll().then((response)=> {
                 this.users = response.data;
             })
         }
