@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import {PostsApiService} from "@/services/posts-adpi.service";
+import { PostsApiService } from "@/services/posts-adpi.service";
 
 export default {
     name: "posts",
@@ -40,6 +40,11 @@ export default {
     },
     beforeMount() {
         this.getAll()
+    },
+    beforeCreate(){
+        if(!window.sessionStorage.getItem('jwt')){ 
+            this.$router.push('/');
+        }
     }
 
 }

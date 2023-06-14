@@ -2,9 +2,13 @@ import axios from "axios";
 
 
 const http = axios.create({
-    baseURL:"https://jsonplaceholder.typicode.com/"
+    baseURL:"http://localhost:5230/api"
 })
 export class UsersApiService {
+    login(body){
+
+        return http.post('/user/login',body)
+    }
 
     getAll() {
         return http.get('users')

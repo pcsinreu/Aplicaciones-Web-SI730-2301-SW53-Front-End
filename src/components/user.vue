@@ -23,6 +23,11 @@ export default {
         // invocar API User
         this.nameUser='';
 
+    },
+    beforeCreate(){
+        if(!window.sessionStorage.getItem('jwt')){ 
+            this.$router.push('/');
+        }
     }
 }
 </script>

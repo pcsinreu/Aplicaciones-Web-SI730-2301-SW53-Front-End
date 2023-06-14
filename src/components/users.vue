@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import {UsersApiService} from "@/services/users-api.service";
 import CardTest from "@/components/card-test.vue";
+import { UsersApiService } from "@/services/users-api.service";
 
 export default {
     name: "users",
@@ -46,6 +46,11 @@ export default {
         // invocar API
             this.getAll()
 
+    },
+    beforeCreate(){
+        if(!window.sessionStorage.getItem('jwt')){ 
+            this.$router.push('/');
+        }
     }
 
 }

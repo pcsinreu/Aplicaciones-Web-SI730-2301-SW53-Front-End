@@ -4,7 +4,13 @@
 
 <script>
 export default {
-    name: "about"
+    name: "about",
+    beforeCreate(){
+        if(!window.sessionStorage.getItem('jwt')){ 
+            this.$router.push('/');
+        }
+    }
+
 }
 </script>
 
